@@ -4,18 +4,22 @@ import { Icon } from "astro-icon/components";
 import { Button } from "@/components/ui/button";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const HERO_TITLE = "CelestialDocs";
+const HERO_TITLE = "GNU/Genshin Metro Project";
 const HERO_SUBTITLE =
     "A modern, type-safe documentation system with hierarchical navigation, hybrid generation, and multi-collection support.";
 const CTA_PRIMARY = { href: "/docs/introduction", label: "View Documentation" };
 const CTA_SECONDARY = {
     href: "https://github.com/HYP3R00T/CelestialDocs",
-    label: "View on GitHub",
+    label: "Download maps",
 };
+const CTA_TERTIARY = {
+    href: "https://www.planetminecraft.com/project/1-19-2-the-gnu-genshin-subway-project/",
+    label: "Check it at PlanetMinecraft.com",
+}
 ---
 
 <BaseLayout
-    title={`${HERO_TITLE} - Modern documentation template`}
+    title={`${HERO_TITLE} - A Open-source subway map for Minecraft`}
     description={HERO_SUBTITLE}
     image="/docs-hero.jpg"
     imageAlt="CelestialDocs documentation template hero"
@@ -29,8 +33,8 @@ const CTA_SECONDARY = {
                 >
                     {HERO_TITLE}
                 </h1>
-                <p class="text-muted-foreground mx-auto max-w-2xl text-xl">
-                    Modern documentation that scales with your project
+                <p class="text-muted-foreground justify-center mx-auto max-w-2xl text-xl">
+                    An open-source, vanilla-powered transit ecosystem built in Minecraft.
                 </p>
             </div>
 
@@ -48,6 +52,17 @@ const CTA_SECONDARY = {
                         <Icon name="github" />
                     </a>
                 </Button>
+                <Button size="lg" variant="secondary">
+                    <a
+                        href={CTA_TERTIARY.href}
+                        target="_blank"
+                        class="flex flex-row items-center gap-3"
+                    >
+                        Check it at PlanetMinecraft.com
+                        <Icon name="earth" />
+                    </a>
+                </Button>
+
             </div>
         </div>
     </section>
@@ -57,84 +72,62 @@ const CTA_SECONDARY = {
         <div class="mb-12 text-center">
             <h2 class="text-foreground pb-4 text-3xl font-bold sm:text-4xl">Everything you need</h2>
             <p class="text-muted-foreground mt-3 text-lg">
-                Built with best practices and developer experience in mind
+                Explore a massive, meticulously engineered subway network inspired by FlashTeens, </br>
+                built entirely on pure vanilla Minecraft technologies. No mods, no hassles—just download and play.
             </p>
         </div>
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div class="bg-popover space-y-3 rounded-lg p-6">
-                <div class="text-3xl">🧭</div>
-                <h3 class="text-foreground text-lg font-semibold">Smart Navigation</h3>
-                <p class="text-muted-foreground text-sm">
-                    Hierarchical structure with tabs, groups, and breadcrumbs keeps users oriented
-                </p>
-            </div>
-
-            <div class="bg-popover space-y-3 rounded-lg p-6">
                 <div class="text-3xl">⚡</div>
-                <h3 class="text-foreground text-lg font-semibold">Fast Setup</h3>
+                <h3 class="text-foreground text-lg font-semibold">Download-and-play</h3>
                 <p class="text-muted-foreground text-sm">
-                    Auto-generate or configure manually, your choice
+                    Download, setup, and ride! No extra mods or resource packs required. Everything you see is powered entirely by vanilla Minecraft technologies and command blocks, ensuring maximum compatibility and seamless performance.
                 </p>
             </div>
 
             <div class="bg-popover space-y-3 rounded-lg p-6">
-                <div class="text-3xl">🔒</div>
-                <h3 class="text-foreground text-lg font-semibold">Type Safe</h3>
+                <div class="text-3xl">📕</div>
+                <h3 class="text-foreground text-lg font-semibold">Educational & Inspiring</h3>
                 <p class="text-muted-foreground text-sm">
-                    Strict TypeScript and Zod validation catch errors before deployment
+                    More than just a map. Read our detailed guides, watch comprehensive tutorials, </br>
+                    and learn how we built this massive transit network. From basic redstone automation to advanced developer platforms, </br>
+                    we show you exactly how to build your own subway systems from scratch.
                 </p>
             </div>
 
             <div class="bg-popover space-y-3 rounded-lg p-6">
-                <div class="text-3xl">🗂️</div>
-                <h3 class="text-foreground text-lg font-semibold">Multi-Collection</h3>
+                <div class="text-3xl">🈚</div>
+                <h3 class="text-foreground text-lg font-semibold">Free and Open-source</h3>
                 <p class="text-muted-foreground text-sm">
-                    Separate docs, guides, and API references with independent navigation
+                    Licensed under open-source and creative-common principles. You can inspect our code, contribute to the transit lines on GitLab, or use our framework to kickstart your own Minecraft railway project.
                 </p>
             </div>
 
             <div class="bg-popover space-y-3 rounded-lg p-6">
-                <div class="text-3xl">📝</div>
-                <h3 class="text-foreground text-lg font-semibold">MDX Support</h3>
+                <div class="text-3xl">🚇</div>
+                <h3 class="text-foreground text-lg font-semibold">Multi-Line Network</h3>
                 <p class="text-muted-foreground text-sm">
-                    Write in Markdown with the power of React components
+                    Explore an expansive transit system with distinct lines, unique station architectures, and comprehensive route maps. Our wiki provides dedicated navigation and transfer guides for every single line in the network.
                 </p>
             </div>
 
             <div class="bg-popover space-y-3 rounded-lg p-6">
-                <div class="text-3xl">🎨</div>
-                <h3 class="text-foreground text-lg font-semibold">Beautiful UI</h3>
+                <div class="text-3xl">🗺️</div>
+                <h3 class="text-foreground text-lg font-semibold">Live Sign & Map Support</h3>
                 <p class="text-muted-foreground text-sm">
-                    Dark mode, responsive design, and accessible by default
+                    No more getting lost in the underground. Access rich interactive guides, dynamic transit maps, and station layouts that perfectly translate the in-game command-block signaling system to your browser.
+                </p>
+            </div>
+
+            <div class="bg-popover space-y-3 rounded-lg p-6">
+                <div class="text-3xl">🏛️</div>
+                <h3 class="text-foreground text-lg font-semibold">Aesthetic Architecture</h3>
+                <p class="text-muted-foreground text-sm">
+                    A perfect blend of industrial transit design and Qualcomm-inspired aesthetics. Every station features unique thematic elements, immersive lighting, and high-fidelity vanilla details tailored for an unforgettable journey.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="mx-auto w-full max-w-6xl px-5 py-8 sm:py-12">
-        <div class="mb-4 text-center">
-            <h2 class="text-foreground pb-4 text-3xl font-bold sm:text-4xl">
-                Ready to get started?
-            </h2>
-            <p class="text-muted-foreground mt-3 text-lg">
-                Explore the documentation or try the live demo
-            </p>
-        </div>
-        <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button size="lg" variant="secondary">
-                <a href="/docs/introduction" class="flex flex-row items-center gap-3">
-                    Read the Docs
-                    <Icon name="right" />
-                </a>
-            </Button>
-            <Button size="lg" variant="secondary">
-                <a href="/funnydocs" class="flex flex-row items-center gap-3">
-                    View Demo
-                    <Icon name="right" />
-                </a>
-            </Button>
-        </div>
-    </section>
-</BaseLayout>
+    </BaseLayout>
